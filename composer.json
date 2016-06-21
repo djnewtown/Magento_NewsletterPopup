@@ -1,5 +1,5 @@
 {
-    "name": "canal-web/magento-newsletter-form",
+    "name": "canal-web/magento-newsletter-popup",
     "type": "magento-module",
     "description": "Manage a popup containing the newsletter form",
     "require": {
