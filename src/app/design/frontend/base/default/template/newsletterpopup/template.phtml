@@ -23,10 +23,20 @@ if(Mage::getStoreConfig('cw_popup/popupconfig/activation')): ?>
     <script type="text/javascript">
         var delay = <?php echo (Mage::getStoreConfig('cw_popup/popupconfig/delai'))? Mage::getStoreConfig('cw_popup/popupconfig/delai') : 3000;  ?>;
         setTimeout(function(){
-            jQuery('#popup_newsletter').bPopup({
-                'closeClass': 'close'
-            });
+            newsletterPopupCall('#popup_newsletter');
         }, delay);
     </script>
 <?php } ?>
 <?php endif; ?>
+
+<script type="text/javascript">
+    /**
+     * Call the popup
+     * @param string item CSS selector
+     */
+    function newsletterPopupCall(item) {
+        jQuery(item).bPopup({
+            'closeClass': 'close'
+        });
+    }
+</script>
