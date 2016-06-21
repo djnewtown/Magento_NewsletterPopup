@@ -1,0 +1,5 @@
+src/app/code/community/Canalweb/NewsletterPopup                  app/code/community/Canalweb/NewsletterPopup                 
+src/app/design/frontend/base/default/layout/newsletter_popup.xml app/design/frontend/base/default/layout/newsletter_popup.xml
+src/app/design/frontend/base/default/template/newsletterpopup    app/design/frontend/base/default/template/newsletterpopup   
+src/app/etc/modules/Canalweb_NewsletterPopup.xml                 app/etc/modules/Canalweb_NewsletterPopup.xml                
+src/skin/frontend/base/default/js/bpopup.min.js                  skin/frontend/base/default/js/bpopup.min.js                 

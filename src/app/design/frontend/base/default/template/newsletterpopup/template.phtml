@@ -1,0 +1,32 @@
+<?php
+if(Mage::getStoreConfig('cw_popup/popupconfig/activation')): ?>
+
+<div id="popup_newsletter" style="display:none;">
+    <div class="close">⨯</div>
+    <?php if(Mage::getStoreConfig('cw_popup/popupconfig/title')): ?>
+        <div class="title"><?php echo Mage::getStoreConfig('cw_popup/popupconfig/title') ?></div>
+    <?php endif; ?>
+    <?php if(Mage::getStoreConfig('cw_popup/popupconfig/desc')): ?>
+        <div class="desc"><?php echo Mage::getStoreConfig('cw_popup/popupconfig/desc') ?></div>
+    <?php endif; ?>
+    <?php if (Mage::getStoreConfig('cw_popup/popupconfig/image')): ?>
+        <img class="image" src="<?= Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).  'newsletter_popup/'.Mage::getStoreConfig('cw_popup/popupconfig/image') ?>" alt="" />
+    <?php endif; ?>
+    <?php echo $this->getChildHtml('newsletter_form'); ?>
+    </div>
+</div>
+
+<?php if(Mage::getStoreConfig('cw_popup/popupconfig/type_popup') == 'auto' && !isset($_COOKIE['newsletter_popup'])){
+    $cookieDelay = (Mage::getStoreConfig('cw_popup/popupconfig/cookie'))? intval(Mage::getStoreConfig('cw_popup/popupconfig/cookie')) : 24;
+    setcookie('newsletter_popup', '1', time() + 3600 * $cookieDelay);
+?>
+    <script type="text/javascript">
+        var delay = <?php echo (Mage::getStoreConfig('cw_popup/popupconfig/delai'))? Mage::getStoreConfig('cw_popup/popupconfig/delai') : 3000;  ?>;
+        setTimeout(function(){
+            jQuery('#popup_newsletter').bPopup({
+                'closeClass': 'close'
+            });
+        }, delay);
+    </script>
+<?php } ?>
+<?php endif; ?>

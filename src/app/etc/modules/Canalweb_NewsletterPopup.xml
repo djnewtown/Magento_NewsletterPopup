@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Canalweb_NewsletterPopup>
+      <active>true</active>
+      <codePool>community</codePool>
+  </Canalweb_NewsletterPopup>
+  </modules>
+</config>

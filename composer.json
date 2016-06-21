@@ -1,0 +1,13 @@
+{
+    "name": "canal-web/magento-slider",
+    "type": "magento-module",
+    "description": "Manage a popup containing the newsletter form",
+    "require": {
+    },
+    "authors":[
+      {
+            "name":"Fabio Cerqueira",
+            "email":"fabio@canal-web.fr"
+        }
+    ]
+}
