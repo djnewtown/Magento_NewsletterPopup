@@ -70,6 +70,7 @@
                      <type_popup>auto</type_popup>
                      <delai>5000</delai>
                      <cookie>24</cookie>
+                     <placeholder>Email</placeholder>
                  </popupconfig>
              </cw_popup>
          </default>
