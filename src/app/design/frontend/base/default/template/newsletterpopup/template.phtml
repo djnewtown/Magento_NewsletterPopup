@@ -13,7 +13,6 @@ if(Mage::getStoreConfig('cw_popup/popupconfig/activation')): ?>
         <img class="image" src="<?= Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).  'newsletter_popup/'.Mage::getStoreConfig('cw_popup/popupconfig/image') ?>" alt="" />
     <?php endif; ?>
     <?php echo $this->getChildHtml('newsletter_form'); ?>
-    </div>
 </div>
 
 <?php if(Mage::getStoreConfig('cw_popup/popupconfig/type_popup') == 'auto' && !isset($_COOKIE['newsletter_popup'])){
